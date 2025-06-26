@@ -4,6 +4,8 @@ import "./globals.css";
 import NavbarComponent from "@/components/navbar/NavbarComponent";
 import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 import Error from "./error";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +34,9 @@ export default function RootLayout({
       >
         <ErrorBoundary errorComponent={Error}>
           <NavbarComponent />
-          {children}
+          <Suspense fallback={<Loading/>}>
+            {children}
+          </Suspense>
         </ErrorBoundary>
       </body>
     </html>
