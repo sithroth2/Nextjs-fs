@@ -13,12 +13,12 @@ export default function BlogCard() {
             setBlogs(data.posts)
         }
         fetchData();
-    })
+    },[blogs])
     return (
         <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 w-[90%] mx-auto'>
             {
-                blogs.map((blog, index) => (
-                    <div className="p-4 max-w-md" key={index}>
+                blogs.map((blog) => (
+                    <div className="p-4 max-w-md" key={blog.id}>
                         <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                             <Image
                                 width={720}

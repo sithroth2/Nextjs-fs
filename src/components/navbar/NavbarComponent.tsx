@@ -13,8 +13,8 @@ export default function NavbarComponent() {
                 </div>
             </div>
             <div className="hidden md:flex md:space-x-10">
-                <Link href="/service"
-                    className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Service</Link>
+                <Link href="/todos"
+                    className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Todos</Link>
                 <Link href="/about"
                     className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">About</Link>
                 <Link href="/product"
