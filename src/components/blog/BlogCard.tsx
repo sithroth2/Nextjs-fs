@@ -8,7 +8,7 @@ export default function BlogCard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await fetch('https://dummyjson.com/posts')
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_API}posts`);
             const data = await res.json();
             setBlogs(data.posts)
         }

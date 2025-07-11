@@ -3,7 +3,7 @@ import { TodoType } from '@/types/todoType';
 import React, { Suspense } from 'react'
 
 async function getTodo(): Promise<TodoType[]> {
-  const res = await fetch('https://dummyjson.com/todos');
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_API}todos`);
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
@@ -20,7 +20,6 @@ export default function page() {
       <TodoComponent
         todos={todos}
       /></Suspense>
-
     </div>
   )
 }

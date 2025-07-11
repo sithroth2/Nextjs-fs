@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 
 async function fetchProduct(): Promise<Product[]> {
-    const res = await fetch("https://dummyjson.com/products")
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_API}products`)
     const data = await res.json()
     return data.products
 }
