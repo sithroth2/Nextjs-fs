@@ -10,7 +10,7 @@ export default async function Home() {
 
           <div className="sm:text-center lg:text-left">
             <h1 className="text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
-              <span className="block xl:inline">Data to enrich your</span>
+              <span className="block xl:inline">Data to enrich your ចង់សរសេរខ្មែរ</span>
               <span className="block text-indigo-600 xl:inline">online business</span>
             </h1>
             <p

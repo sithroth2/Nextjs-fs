@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Comfortaa } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import NavbarComponent from "@/components/navbar/NavbarComponent";
 import { ErrorBoundary } from "next/dist/client/components/error-boundary";
@@ -7,15 +8,16 @@ import Error from "./error";
 import { Suspense } from "react";
 import Loading from "./loading";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const comfortaa = Comfortaa({
+  variable: "--font-comfortaa",
   subsets: ["latin"],
-});
+  weight: ["300", "400", "500", "600", "700"],
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const preahvihear = localFont({
+  src: "../../public/fonts/Preahvihear-Regular.ttf",
+  variable: "--font-preahvihear",
+})
 
 export const metadata: Metadata = {
   title: "FullStack",
@@ -30,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${comfortaa.variable} ${preahvihear.variable} antialiased`}
       >
         <ErrorBoundary errorComponent={Error}>
           <NavbarComponent />
