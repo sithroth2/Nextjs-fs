@@ -12,7 +12,6 @@ export default function BlogCard() {
     const searchParams = useSearchParams()
     const router = useRouter()
 
-
     // useEffect(() => {
     //     const search = searchParams.get('search') || ''
     //     setQuery(search)
@@ -47,7 +46,6 @@ export default function BlogCard() {
                 const result = search
                     ? blogList.filter((u: PostType) =>
                         u.title.toLowerCase().includes(search.toLowerCase())
-
                     )
                     : blogList
                 setFilteredBlogs(result)
@@ -59,7 +57,6 @@ export default function BlogCard() {
         setQuery(val)
         router.push(`/blog?search=${encodeURIComponent(val)}`)
     }
-
 
     return (
         <>

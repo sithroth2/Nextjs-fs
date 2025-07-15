@@ -1,8 +1,12 @@
 // import Image from 'next/image'
+'use client';
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
+import { MenuItems } from './menu';
 
 export default function NavbarComponent() {
+    const pathname = usePathname();
     return (
         <nav className="w-[90%] mx-auto relative flex items-center justify-between sm:h-10 md:justify-center py-6 px-4 mt-2">
             <div className="flex items-center flex-1">
@@ -13,17 +17,15 @@ export default function NavbarComponent() {
                 </div>
             </div>
             <div className="hidden md:flex md:space-x-10">
-                <Link href="/todos"
-                    className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Todos</Link>
-                <Link href="/about"
-                    className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">About</Link>
-                <Link href="/product"
-                    className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Product</Link>
-                <Link href="/blog"
-                    className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Blog</Link>
-
+                {
+                    MenuItems.map((item, index) => (
+                        <Link key={index} href={item.path}
+                            className={`${pathname === item.path ? 'text-blue-500' : ''} `}>
+                                {item.name}
+                        </Link>
+                    ))
+                }
             </div>
-
         </nav>
     )
 }
