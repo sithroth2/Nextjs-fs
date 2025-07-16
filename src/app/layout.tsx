@@ -23,6 +23,22 @@ const preahvihear = localFont({
 export const metadata: Metadata = {
   title: "Home",
   description: "Build and deploy on the AI Cloud. Vercel provides the developer tools and cloud infrastructure to build, scale, and secure a faster, more personalized web.",
+  openGraph: {
+    title: "Home",
+    description: "Build and deploy on the AI Cloud. Vercel provides the developer tools and cloud infrastructure to build, scale, and secure a faster, more personalized web.",
+    url: "https://nextjs-fullstack-evening.vercel.app/",
+    siteName: "Home",
+    images: [
+      {
+        url: "https://i.ytimg.com/vi/6jQdZcYY8OY/maxresdefault.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Open Graph Image",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
