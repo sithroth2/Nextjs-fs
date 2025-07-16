@@ -8,7 +8,6 @@ async function getTodo(): Promise<TodoType[]> {
     throw new Error('Failed to fetch data');
   }
   const data = await res.json();
-  console.log(data.todos as TodoType[]);
   return data.todos as TodoType[];
 }
 
