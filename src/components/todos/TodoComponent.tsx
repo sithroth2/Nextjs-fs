@@ -3,7 +3,7 @@ import React, { use } from 'react'
 
 export default function TodoComponent({ todos }: { todos: Promise<TodoType[]>}) {
     const allTodos = use(todos);
-    console.log('allTodos', allTodos);
+    // console.log('allTodos', allTodos);
     return (
         <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-16">
             <div className="px-4 py-2">
