@@ -61,7 +61,6 @@ export default function ProductDetailPage() {
                                 alt="Thumbnail 1"
                                 className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
                             />
-
                         </div>
                     </div>
 

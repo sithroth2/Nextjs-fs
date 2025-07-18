@@ -14,7 +14,7 @@ async function getTodo(): Promise<TodoType[]> {
 export default function page() {
   const todos = getTodo();
   return (
-    <div className='flex justify-center items-center h-screen'>
+    <div className='w-[90%] mx-auto'>
       <Suspense fallback={<div>Loading...</div>}>
       <TodoComponent
         todos={todos}
